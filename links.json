@@ -1,0 +1,24 @@
+{
+  "title": "Engenharia Vydence",
+  "subtitle": "Acesse nossos ______",
+  "logo": "https://via.placeholder.com/120",
+  "links": [
+    {
+      "label": "WhatsApp Suporte",
+      "url": "https://wa.me/5516981338019"
+    },
+    {
+      "label": "Site Oficial",
+      "url": "https://vydence.com"
+    },
+    {
+      "label": "Catálogos",
+      "url": "#"
+    },
+    {
+      "label": "Manual do Equipamento",
+      "url": "#"
+    }
+  ]
+}
+

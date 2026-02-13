@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Links</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <img id="logo" class="logo">
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+
+    <div id="links"></div>
+</div>
+
+<script>
+fetch("links.json")
+.then(r => r.json())
+.then(data => {
+
+    document.getElementById("logo").src = data.logo
+    document.getElementById("title").innerText = data.title
+    document.getElementById("subtitle").innerText = data.subtitle
+
+    const box = document.getElementById("links")
+
+    data.links.forEach(l => {
+        const a = document.createElement("a")
+        a.href = l.url
+        a.className = "btn"
+        a.innerText = l.label
+        a.target = "_blank"
+
+        // tracking básico
+        a.onclick = () => console.log("Click:", l.label)
+
+        box.appendChild(a)
+    })
+})
+</script>
+
+</body>
+</html>
